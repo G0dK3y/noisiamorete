@@ -5,6 +5,7 @@ import { siteConfig } from "@/config/site"
 import { SkipLink } from "@/components/layout/skip-link"
 import { SiteHeader } from "@/components/layout/site-header"
 import { SiteFooter } from "@/components/layout/site-footer"
+import { BackToTop } from "@/components/common/back-to-top"
 import "./globals.css"
 
 const geistSans = Geist({
@@ -64,6 +65,7 @@ export default function RootLayout({
             {children}
           </main>
           <SiteFooter />
+          <BackToTop />
         </ThemeProvider>
       </body>
     </html>

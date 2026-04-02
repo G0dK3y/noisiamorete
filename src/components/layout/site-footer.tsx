@@ -77,14 +77,20 @@ export function SiteFooter() {
             &copy; {new Date().getFullYear()} {siteConfig.name} APS — C.F.{" "}
             {siteConfig.cf}
           </p>
-          <p>
+          <div className="flex items-center gap-4">
+            <Link
+              href="/accessibilita"
+              className="transition-colors hover:text-foreground"
+            >
+              Accessibilità
+            </Link>
             <a
               href={`mailto:${siteConfig.email}`}
               className="transition-colors hover:text-foreground"
             >
               {siteConfig.email}
             </a>
-          </p>
+          </div>
         </div>
       </div>
     </footer>

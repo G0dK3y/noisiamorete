@@ -87,6 +87,7 @@ export function ContactForm() {
         </label>
         <Input
           id="name"
+          autoComplete="name"
           {...register("name")}
           aria-describedby={errors.name ? "name-error" : undefined}
           aria-invalid={!!errors.name}
@@ -105,6 +106,7 @@ export function ContactForm() {
         <Input
           id="email"
           type="email"
+          autoComplete="email"
           {...register("email")}
           aria-describedby={errors.email ? "email-error" : undefined}
           aria-invalid={!!errors.email}
@@ -122,6 +124,7 @@ export function ContactForm() {
         </label>
         <Input
           id="subject"
+          autoComplete="off"
           {...register("subject")}
           aria-describedby={errors.subject ? "subject-error" : undefined}
           aria-invalid={!!errors.subject}
