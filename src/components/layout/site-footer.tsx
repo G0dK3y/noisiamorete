@@ -92,6 +92,18 @@ export function SiteFooter() {
             </a>
           </div>
         </div>
+
+        <div className="mt-4 text-center text-xs text-muted-foreground">
+          Sito sviluppato da{" "}
+          <a
+            href="https://www.omniproject.it/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline transition-colors hover:text-foreground"
+          >
+            OmniProject
+          </a>
+        </div>
       </div>
     </footer>
   )
