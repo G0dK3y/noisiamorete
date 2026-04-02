@@ -57,6 +57,7 @@ function StatItem({
   description: string
 }) {
   const { count, ref } = useCountUp(value)
+  const finished = count === value
 
   return (
     <div ref={ref} className="text-center" aria-label={`${label}: ${value.toLocaleString("it-IT")}`}>
@@ -65,6 +66,9 @@ function StatItem({
       </p>
       <p className="mt-2 text-lg font-semibold">{label}</p>
       <p className="mt-1 text-sm text-muted-foreground">{description}</p>
+      <span className="sr-only" aria-live="polite">
+        {finished ? `${label}: ${value.toLocaleString("it-IT")}` : ""}
+      </span>
     </div>
   )
 }

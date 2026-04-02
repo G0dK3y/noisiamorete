@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation"
 import { siteConfig } from "@/config/site"
 import { mainNav, ctaNav } from "@/data/navigation"
 import { ThemeToggle } from "@/components/common/theme-toggle"
+import { FontSizeControl } from "@/components/common/font-size-control"
 import { MobileNav } from "@/components/layout/mobile-nav"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
@@ -71,6 +72,7 @@ export function SiteHeader() {
               </Button>
             )
           )}
+          <FontSizeControl />
           <ThemeToggle />
         </div>
       </div>

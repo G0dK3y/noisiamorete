@@ -166,3 +166,50 @@ select,
 textarea {
   min-height: 44px;
 }
+
+/* ── Print ────────────────────────────────────────── */
+@media print {
+  /* Hide non-essential UI */
+  header[role="banner"],
+  footer[role="contentinfo"],
+  nav[aria-label="Breadcrumb"],
+  button,
+  .fixed {
+    display: none !important;
+  }
+
+  /* Reset background and text for readability */
+  body {
+    background: white !important;
+    color: black !important;
+    font-size: 12pt;
+  }
+
+  /* Remove shadows, borders keep for structure */
+  * {
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  /* Show URLs after external links */
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    color: #555;
+  }
+
+  /* Prevent page breaks inside cards and articles */
+  article,
+  .rounded-lg {
+    break-inside: avoid;
+  }
+
+  /* Full width */
+  .max-w-6xl,
+  .max-w-5xl,
+  .max-w-3xl,
+  .max-w-2xl,
+  .max-w-lg {
+    max-width: 100% !important;
+  }
+}

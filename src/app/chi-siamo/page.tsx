@@ -89,8 +89,31 @@ export default function ChiSiamoPage() {
             </p>
           </div>
 
+          <nav aria-label="Indice dello statuto" className="rounded-lg border border-border bg-card p-5">
+            <h3 className="mb-3 font-semibold">Indice degli articoli</h3>
+            <ul className="grid gap-1 text-sm sm:grid-cols-2">
+              <li><a href="#art-1" className="text-muted-foreground underline-offset-2 hover:text-foreground hover:underline">Art. 1 — Costituzione</a></li>
+              <li><a href="#art-2" className="text-muted-foreground underline-offset-2 hover:text-foreground hover:underline">Art. 2 — Sede</a></li>
+              <li><a href="#art-4" className="text-muted-foreground underline-offset-2 hover:text-foreground hover:underline">Art. 4 — Oggetto e finalità</a></li>
+              <li><a href="#art-5" className="text-muted-foreground underline-offset-2 hover:text-foreground hover:underline">Art. 5 — Attività di interesse generale</a></li>
+              <li><a href="#art-6" className="text-muted-foreground underline-offset-2 hover:text-foreground hover:underline">Art. 6 — Associati</a></li>
+              <li><a href="#art-7" className="text-muted-foreground underline-offset-2 hover:text-foreground hover:underline">Art. 7 — Diritti e doveri</a></li>
+              <li><a href="#art-8" className="text-muted-foreground underline-offset-2 hover:text-foreground hover:underline">Art. 8 — Perdita qualità di associato</a></li>
+              <li><a href="#art-9" className="text-muted-foreground underline-offset-2 hover:text-foreground hover:underline">Art. 9 — Organi</a></li>
+              <li><a href="#art-10" className="text-muted-foreground underline-offset-2 hover:text-foreground hover:underline">Art. 10 — Assemblea</a></li>
+              <li><a href="#art-11" className="text-muted-foreground underline-offset-2 hover:text-foreground hover:underline">Art. 11 — Convocazione</a></li>
+              <li><a href="#art-12" className="text-muted-foreground underline-offset-2 hover:text-foreground hover:underline">Art. 12 — Consiglio Direttivo</a></li>
+              <li><a href="#art-14" className="text-muted-foreground underline-offset-2 hover:text-foreground hover:underline">Art. 14 — Attribuzioni C.D.</a></li>
+              <li><a href="#art-15" className="text-muted-foreground underline-offset-2 hover:text-foreground hover:underline">Art. 15 — Il Presidente</a></li>
+              <li><a href="#art-16" className="text-muted-foreground underline-offset-2 hover:text-foreground hover:underline">Art. 16 — Segretario Tesoriere</a></li>
+              <li><a href="#art-19" className="text-muted-foreground underline-offset-2 hover:text-foreground hover:underline">Art. 19 — Risorse economiche</a></li>
+              <li><a href="#art-21" className="text-muted-foreground underline-offset-2 hover:text-foreground hover:underline">Art. 21 — Scioglimento</a></li>
+              <li><a href="#art-22" className="text-muted-foreground underline-offset-2 hover:text-foreground hover:underline">Art. 22 — Disposizioni generali</a></li>
+            </ul>
+          </nav>
+
           <div className="space-y-4">
-            <article className="rounded-lg border border-border bg-card p-5">
+            <article id="art-1" className="rounded-lg border border-border bg-card p-5">
               <h3 className="font-semibold">Art. 1 — Costituzione</h3>
               <p className="mt-2 text-sm text-muted-foreground">
                 L&apos;Associazione è senza scopo di lucro, adotta la qualifica
@@ -100,7 +123,7 @@ export default function ChiSiamoPage() {
               </p>
             </article>
 
-            <article className="rounded-lg border border-border bg-card p-5">
+            <article id="art-2" className="rounded-lg border border-border bg-card p-5">
               <h3 className="font-semibold">Art. 2 — Sede</h3>
               <p className="mt-2 text-sm text-muted-foreground">
                 Via dell&apos;Acqua Acetosa n. 70, Ciampino (Roma). Il Consiglio
@@ -109,7 +132,7 @@ export default function ChiSiamoPage() {
               </p>
             </article>
 
-            <article className="rounded-lg border border-border bg-card p-5">
+            <article id="art-4" className="rounded-lg border border-border bg-card p-5">
               <h3 className="font-semibold">Art. 4 — Oggetto e finalità</h3>
               <p className="mt-2 text-sm text-muted-foreground">
                 L&apos;Associazione è apartitica, aconfessionale e senza scopo
@@ -120,7 +143,7 @@ export default function ChiSiamoPage() {
               </p>
             </article>
 
-            <article className="rounded-lg border border-border bg-card p-5">
+            <article id="art-5" className="rounded-lg border border-border bg-card p-5">
               <h3 className="font-semibold">
                 Art. 5 — Attività di interesse generale
               </h3>
@@ -146,7 +169,7 @@ export default function ChiSiamoPage() {
               </ul>
             </article>
 
-            <article className="rounded-lg border border-border bg-card p-5">
+            <article id="art-6" className="rounded-lg border border-border bg-card p-5">
               <h3 className="font-semibold">Art. 6 — Associati</h3>
               <p className="mt-2 text-sm text-muted-foreground">
                 Possono aderire tutte le persone che condividano gli scopi
@@ -156,7 +179,7 @@ export default function ChiSiamoPage() {
               </p>
             </article>
 
-            <article className="rounded-lg border border-border bg-card p-5">
+            <article id="art-7" className="rounded-lg border border-border bg-card p-5">
               <h3 className="font-semibold">
                 Art. 7 — Diritti e doveri degli associati
               </h3>
@@ -168,7 +191,7 @@ export default function ChiSiamoPage() {
               </p>
             </article>
 
-            <article className="rounded-lg border border-border bg-card p-5">
+            <article id="art-8" className="rounded-lg border border-border bg-card p-5">
               <h3 className="font-semibold">
                 Art. 8 — Perdita della qualità di associato
               </h3>
@@ -180,7 +203,7 @@ export default function ChiSiamoPage() {
               </p>
             </article>
 
-            <article className="rounded-lg border border-border bg-card p-5">
+            <article id="art-9" className="rounded-lg border border-border bg-card p-5">
               <h3 className="font-semibold">Art. 9 — Organi dell&apos;Associazione</h3>
               <p className="mt-2 text-sm text-muted-foreground">
                 Gli organi sono: Assemblea degli Associati, Consiglio Direttivo,
@@ -189,7 +212,7 @@ export default function ChiSiamoPage() {
               </p>
             </article>
 
-            <article className="rounded-lg border border-border bg-card p-5">
+            <article id="art-10" className="rounded-lg border border-border bg-card p-5">
               <h3 className="font-semibold">
                 Art. 10 — Assemblea degli Associati
               </h3>
@@ -201,7 +224,7 @@ export default function ChiSiamoPage() {
               </p>
             </article>
 
-            <article className="rounded-lg border border-border bg-card p-5">
+            <article id="art-11" className="rounded-lg border border-border bg-card p-5">
               <h3 className="font-semibold">
                 Art. 11 — Convocazione e validità dell&apos;Assemblea
               </h3>
@@ -222,7 +245,7 @@ export default function ChiSiamoPage() {
               </ul>
             </article>
 
-            <article className="rounded-lg border border-border bg-card p-5">
+            <article id="art-12" className="rounded-lg border border-border bg-card p-5">
               <h3 className="font-semibold">Art. 12 — Consiglio Direttivo</h3>
               <ul className="mt-2 space-y-2 text-sm text-muted-foreground">
                 <li>
@@ -236,7 +259,7 @@ export default function ChiSiamoPage() {
               </ul>
             </article>
 
-            <article className="rounded-lg border border-border bg-card p-5">
+            <article id="art-14" className="rounded-lg border border-border bg-card p-5">
               <h3 className="font-semibold">
                 Art. 14 — Attribuzioni del Consiglio Direttivo
               </h3>
@@ -247,7 +270,7 @@ export default function ChiSiamoPage() {
               </p>
             </article>
 
-            <article className="rounded-lg border border-border bg-card p-5">
+            <article id="art-15" className="rounded-lg border border-border bg-card p-5">
               <h3 className="font-semibold">Art. 15 — Il Presidente</h3>
               <p className="mt-2 text-sm text-muted-foreground">
                 Rappresenta legalmente l&apos;Associazione, convoca e presiede
@@ -256,7 +279,7 @@ export default function ChiSiamoPage() {
               </p>
             </article>
 
-            <article className="rounded-lg border border-border bg-card p-5">
+            <article id="art-16" className="rounded-lg border border-border bg-card p-5">
               <h3 className="font-semibold">
                 Art. 16 — Il Segretario Tesoriere
               </h3>
@@ -267,7 +290,7 @@ export default function ChiSiamoPage() {
               </p>
             </article>
 
-            <article className="rounded-lg border border-border bg-card p-5">
+            <article id="art-19" className="rounded-lg border border-border bg-card p-5">
               <h3 className="font-semibold">Art. 19 — Risorse economiche</h3>
               <p className="mt-2 text-sm text-muted-foreground">
                 Le entrate derivano da quote associative, erogazioni liberali,
@@ -276,7 +299,7 @@ export default function ChiSiamoPage() {
               </p>
             </article>
 
-            <article className="rounded-lg border border-border bg-card p-5">
+            <article id="art-21" className="rounded-lg border border-border bg-card p-5">
               <h3 className="font-semibold">Art. 21 — Scioglimento</h3>
               <p className="mt-2 text-sm text-muted-foreground">
                 In caso di scioglimento, il patrimonio residuo sarà devoluto ad
@@ -285,7 +308,7 @@ export default function ChiSiamoPage() {
               </p>
             </article>
 
-            <article className="rounded-lg border border-border bg-card p-5">
+            <article id="art-22" className="rounded-lg border border-border bg-card p-5">
               <h3 className="font-semibold">Art. 22 — Disposizioni generali</h3>
               <p className="mt-2 text-sm text-muted-foreground">
                 Per quanto non previsto, si applicano le norme del D.Lgs.
