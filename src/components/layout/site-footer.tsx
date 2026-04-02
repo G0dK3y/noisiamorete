@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Heart } from "lucide-react"
+import Image from "next/image"
 import { siteConfig } from "@/config/site"
 import { SocialLinks } from "@/components/common/social-links"
 import { IbanDisplay } from "@/components/common/iban-display"
@@ -10,6 +10,7 @@ const footerLinks = {
     { label: "La nostra storia", href: "/chi-siamo" },
     { label: "La nostra missione", href: "/missione" },
     { label: "Dicono di noi", href: "/dicono-di-noi" },
+    { label: "Trasparenza", href: "/trasparenza" },
   ],
   Progetti: [
     { label: "Tutti i progetti", href: "/progetti" },
@@ -30,9 +31,14 @@ export function SiteFooter() {
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div className="space-y-4">
-            <Link href="/" className="flex items-center gap-2" aria-label="Torna alla homepage">
-              <Heart className="h-6 w-6 text-primary" aria-hidden="true" />
-              <span className="text-lg font-bold">{siteConfig.name}</span>
+            <Link href="/" aria-label="Torna alla homepage">
+              <Image
+                src="/logo-wide.png"
+                alt={siteConfig.name}
+                width={200}
+                height={60}
+                className="h-auto w-48"
+              />
             </Link>
             <p className="text-sm text-muted-foreground">{siteConfig.tagline}</p>
             <SocialLinks />

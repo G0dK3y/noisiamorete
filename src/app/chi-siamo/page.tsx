@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { Scale } from "lucide-react"
 import { PageHeader } from "@/components/common/page-header"
 import { SectionWrapper } from "@/components/common/section-wrapper"
 import { generatePageMetadata } from "@/lib/metadata"
@@ -72,6 +73,225 @@ export default function ChiSiamoPage() {
                 </li>
               ))}
             </ul>
+          </div>
+        </div>
+      </SectionWrapper>
+
+      <SectionWrapper title="Statuto dell'Associazione">
+        <div className="mx-auto max-w-3xl space-y-6">
+          <div className="flex items-center gap-3">
+            <Scale className="h-8 w-8 text-primary" aria-hidden="true" />
+            <p className="text-lg text-muted-foreground">
+              Lo Statuto disciplina la vita associativa di{" "}
+              <strong>Rete Italiana Disabili — APS</strong>, redatto ai sensi del
+              D.Lgs. 117/2017 (Codice del Terzo Settore). C.F.{" "}
+              <span className="font-mono">94083440589</span>.
+            </p>
+          </div>
+
+          <div className="space-y-4">
+            <article className="rounded-lg border border-border bg-card p-5">
+              <h3 className="font-semibold">Art. 1 — Costituzione</h3>
+              <p className="mt-2 text-sm text-muted-foreground">
+                L&apos;Associazione è senza scopo di lucro, adotta la qualifica
+                di <strong>APS</strong> (Associazione di Promozione Sociale) ed è
+                disciplinata dal presente Statuto e dagli eventuali regolamenti
+                approvati secondo le norme statutarie.
+              </p>
+            </article>
+
+            <article className="rounded-lg border border-border bg-card p-5">
+              <h3 className="font-semibold">Art. 2 — Sede</h3>
+              <p className="mt-2 text-sm text-muted-foreground">
+                Via dell&apos;Acqua Acetosa n. 70, Ciampino (Roma). Il Consiglio
+                Direttivo può trasferire la sede o istituire ulteriori sedi
+                operative senza modifica statutaria.
+              </p>
+            </article>
+
+            <article className="rounded-lg border border-border bg-card p-5">
+              <h3 className="font-semibold">Art. 4 — Oggetto e finalità</h3>
+              <p className="mt-2 text-sm text-muted-foreground">
+                L&apos;Associazione è apartitica, aconfessionale e senza scopo
+                di lucro. Si basa sui principi di democraticità, trasparenza,
+                solidarietà e pluralismo. Ha come scopo principale la difesa e
+                la tutela dei diritti dei più deboli, in particolare
+                nell&apos;ambito della disabilità.
+              </p>
+            </article>
+
+            <article className="rounded-lg border border-border bg-card p-5">
+              <h3 className="font-semibold">
+                Art. 5 — Attività di interesse generale
+              </h3>
+              <ul className="mt-2 space-y-2 text-sm text-muted-foreground">
+                <li>
+                  <strong>Educazione e formazione:</strong> istruzione,
+                  formazione professionale, attività culturali con finalità
+                  educativa e contrasto della povertà educativa.
+                </li>
+                <li>
+                  <strong>Cultura e tempo libero:</strong> attività culturali,
+                  artistiche, ricreative, turistiche e sportive dilettantistiche.
+                </li>
+                <li>
+                  <strong>Tutela della disabilità:</strong> assistenza e
+                  consulenza tecnica e giuridica, supporto ad amministratori di
+                  sostegno, progetti di vita e inserimento lavorativo.
+                </li>
+                <li>
+                  <strong>Gestione crisi:</strong> assistenza in procedure di
+                  esdebitazione e gestione della crisi da sovra-indebitamento.
+                </li>
+              </ul>
+            </article>
+
+            <article className="rounded-lg border border-border bg-card p-5">
+              <h3 className="font-semibold">Art. 6 — Associati</h3>
+              <p className="mt-2 text-sm text-muted-foreground">
+                Possono aderire tutte le persone che condividano gli scopi
+                associativi. L&apos;ammissione è deliberata dal Consiglio
+                Direttivo su domanda scritta. La quota associativa annuale non è
+                trasmissibile né ripetibile.
+              </p>
+            </article>
+
+            <article className="rounded-lg border border-border bg-card p-5">
+              <h3 className="font-semibold">
+                Art. 7 — Diritti e doveri degli associati
+              </h3>
+              <p className="mt-2 text-sm text-muted-foreground">
+                Tutti gli associati hanno uguali diritti e obblighi. Gli
+                associati in regola con la quota hanno diritto di voto e di
+                elettorato attivo e passivo. L&apos;attività dei volontari è
+                personale, spontanea e gratuita.
+              </p>
+            </article>
+
+            <article className="rounded-lg border border-border bg-card p-5">
+              <h3 className="font-semibold">
+                Art. 8 — Perdita della qualità di associato
+              </h3>
+              <p className="mt-2 text-sm text-muted-foreground">
+                La qualità di associato si perde per decesso, dimissioni
+                volontarie, decadenza per morosità (dopo sei mesi) o esclusione
+                per gravi motivi o comportamenti lesivi dell&apos;immagine
+                dell&apos;Associazione.
+              </p>
+            </article>
+
+            <article className="rounded-lg border border-border bg-card p-5">
+              <h3 className="font-semibold">Art. 9 — Organi dell&apos;Associazione</h3>
+              <p className="mt-2 text-sm text-muted-foreground">
+                Gli organi sono: Assemblea degli Associati, Consiglio Direttivo,
+                Presidente, Segretario Tesoriere e l&apos;eventuale Organo di
+                Controllo. Tutte le cariche hanno durata triennale.
+              </p>
+            </article>
+
+            <article className="rounded-lg border border-border bg-card p-5">
+              <h3 className="font-semibold">
+                Art. 10 — Assemblea degli Associati
+              </h3>
+              <p className="mt-2 text-sm text-muted-foreground">
+                L&apos;Assemblea è il massimo organo deliberante. Ha il compito
+                di approvare il bilancio, eleggere il Consiglio Direttivo,
+                deliberare sulle modifiche statutarie e sullo scioglimento
+                dell&apos;ente.
+              </p>
+            </article>
+
+            <article className="rounded-lg border border-border bg-card p-5">
+              <h3 className="font-semibold">
+                Art. 11 — Convocazione e validità dell&apos;Assemblea
+              </h3>
+              <ul className="mt-2 space-y-2 text-sm text-muted-foreground">
+                <li>
+                  L&apos;Assemblea è convocata dal Presidente almeno una volta
+                  l&apos;anno per l&apos;approvazione dei bilanci.
+                </li>
+                <li>
+                  In seconda convocazione è validamente costituita qualunque sia
+                  il numero degli intervenuti.
+                </li>
+                <li>
+                  Le deliberazioni sono prese a maggioranza dei voti; per le
+                  modifiche statutarie occorre il voto favorevole di almeno due
+                  terzi degli intervenuti.
+                </li>
+              </ul>
+            </article>
+
+            <article className="rounded-lg border border-border bg-card p-5">
+              <h3 className="font-semibold">Art. 12 — Consiglio Direttivo</h3>
+              <ul className="mt-2 space-y-2 text-sm text-muted-foreground">
+                <li>
+                  È l&apos;organo esecutivo, composto da 3 a 9 membri eletti tra
+                  gli associati.
+                </li>
+                <li>
+                  Elegge al suo interno il Presidente e il Vice Presidente e
+                  assegna gli incarichi di Segretario e Tesoriere.
+                </li>
+              </ul>
+            </article>
+
+            <article className="rounded-lg border border-border bg-card p-5">
+              <h3 className="font-semibold">
+                Art. 14 — Attribuzioni del Consiglio Direttivo
+              </h3>
+              <p className="mt-2 text-sm text-muted-foreground">
+                Gestisce l&apos;amministrazione ordinaria e straordinaria,
+                predispone il bilancio consuntivo e preventivo e decide
+                sull&apos;ammissione o esclusione degli associati.
+              </p>
+            </article>
+
+            <article className="rounded-lg border border-border bg-card p-5">
+              <h3 className="font-semibold">Art. 15 — Il Presidente</h3>
+              <p className="mt-2 text-sm text-muted-foreground">
+                Rappresenta legalmente l&apos;Associazione, convoca e presiede
+                l&apos;Assemblea e il Consiglio Direttivo e compie gli atti di
+                ordinaria amministrazione.
+              </p>
+            </article>
+
+            <article className="rounded-lg border border-border bg-card p-5">
+              <h3 className="font-semibold">
+                Art. 16 — Il Segretario Tesoriere
+              </h3>
+              <p className="mt-2 text-sm text-muted-foreground">
+                Cura la redazione dei verbali, la tenuta dei libri sociali (soci
+                e volontari) e dei libri contabili per la predisposizione del
+                bilancio.
+              </p>
+            </article>
+
+            <article className="rounded-lg border border-border bg-card p-5">
+              <h3 className="font-semibold">Art. 19 — Risorse economiche</h3>
+              <p className="mt-2 text-sm text-muted-foreground">
+                Le entrate derivano da quote associative, erogazioni liberali,
+                donazioni, raccolte fondi e contributi pubblici. È vietata la
+                distribuzione di utili o avanzi di gestione tra gli associati.
+              </p>
+            </article>
+
+            <article className="rounded-lg border border-border bg-card p-5">
+              <h3 className="font-semibold">Art. 21 — Scioglimento</h3>
+              <p className="mt-2 text-sm text-muted-foreground">
+                In caso di scioglimento, il patrimonio residuo sarà devoluto ad
+                altro ente del Terzo Settore, previo parere dell&apos;ufficio
+                competente del RUNTS.
+              </p>
+            </article>
+
+            <article className="rounded-lg border border-border bg-card p-5">
+              <h3 className="font-semibold">Art. 22 — Disposizioni generali</h3>
+              <p className="mt-2 text-sm text-muted-foreground">
+                Per quanto non previsto, si applicano le norme del D.Lgs.
+                117/2017 (Codice del Terzo Settore) e del Codice Civile.
+              </p>
+            </article>
           </div>
         </div>
       </SectionWrapper>

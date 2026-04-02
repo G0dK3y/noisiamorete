@@ -1,8 +1,8 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { usePathname } from "next/navigation"
-import { Heart } from "lucide-react"
 import { siteConfig } from "@/config/site"
 import { mainNav, ctaNav } from "@/data/navigation"
 import { ThemeToggle } from "@/components/common/theme-toggle"
@@ -21,11 +21,14 @@ export function SiteHeader() {
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
         <div className="flex items-center gap-2">
           <MobileNav />
-          <Link href="/" className="flex min-h-11 items-center gap-2" aria-label="Torna alla homepage">
-            <Heart className="h-6 w-6 text-primary" aria-hidden="true" />
-            <span className="hidden text-lg font-bold sm:inline-block">
-              {siteConfig.name}
-            </span>
+          <Link href="/" className="flex min-h-11 items-center" aria-label="Torna alla homepage">
+            <Image
+              src="/logo.png"
+              alt={siteConfig.name}
+              width={40}
+              height={40}
+              className="h-10 w-10"
+            />
           </Link>
         </div>
 
