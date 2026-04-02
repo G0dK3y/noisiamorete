@@ -22,7 +22,7 @@ export function SponsorGrid() {
                 alt={`Logo di ${sponsor.name}`}
                 width={120}
                 height={60}
-                className="h-12 w-auto object-contain grayscale transition-all hover:grayscale-0 "
+                className="h-12 w-auto object-contain grayscale transition-all hover:grayscale-0 focus-visible:grayscale-0"
               />
               <span className="text-xs text-muted-foreground">{sponsor.name}</span>
             </a>
@@ -33,7 +33,7 @@ export function SponsorGrid() {
                 alt={`Logo di ${sponsor.name}`}
                 width={120}
                 height={60}
-                className="h-12 w-auto object-contain grayscale transition-all hover:grayscale-0 "
+                className="h-12 w-auto object-contain grayscale transition-all hover:grayscale-0"
               />
               <span className="text-xs text-muted-foreground">{sponsor.name}</span>
             </>

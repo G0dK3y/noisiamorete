@@ -19,7 +19,7 @@ export function HeroSection({
   secondaryCtaHref,
 }: HeroSectionProps) {
   return (
-    <section className="relative overflow-hidden py-24 sm:py-32 lg:py-40">
+    <section aria-label="Benvenuto" className="relative overflow-hidden py-24 sm:py-32 lg:py-40">
       {/* Subtle decorative element */}
       <div className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute -top-24 right-0 h-[500px] w-[500px] rounded-full bg-primary/5 blur-3xl" />

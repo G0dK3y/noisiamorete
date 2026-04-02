@@ -35,6 +35,9 @@ export const metadata: Metadata = {
     locale: "it_IT",
     type: "website",
   },
+  other: {
+    "theme-color": "#1e40af",
+  },
 }
 
 export default function RootLayout({
@@ -57,7 +60,7 @@ export default function RootLayout({
         >
           <SkipLink />
           <SiteHeader />
-          <main id="main-content" className="flex-1">
+          <main id="main-content" className="flex-1" aria-label="Contenuto principale">
             {children}
           </main>
           <SiteFooter />

@@ -24,8 +24,9 @@ export function IbanDisplay({ compact }: { compact?: boolean }) {
         </code>
         <button
           onClick={copyIban}
-          className="rounded-md p-1 text-muted-foreground transition-colors hover:text-foreground"
-          aria-label="Copia IBAN"
+          className="rounded-md p-2 text-muted-foreground transition-colors hover:text-foreground focus-visible:text-foreground"
+          aria-label={copied ? "IBAN copiato" : "Copia IBAN negli appunti"}
+          type="button"
         >
           {copied ? (
             <Check className="h-4 w-4 text-success" />

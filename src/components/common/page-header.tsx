@@ -1,5 +1,7 @@
 import Link from "next/link"
+import Script from "next/script"
 import { ChevronRight } from "lucide-react"
+import { siteConfig } from "@/config/site"
 
 interface Breadcrumb {
   label: string
@@ -13,9 +15,40 @@ interface PageHeaderProps {
 }
 
 export function PageHeader({ title, description, breadcrumbs }: PageHeaderProps) {
+  const jsonLd =
+    breadcrumbs && breadcrumbs.length > 0
+      ? JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "Home",
+              item: siteConfig.url,
+            },
+            ...breadcrumbs.map((crumb, i) => ({
+              "@type": "ListItem",
+              position: i + 2,
+              name: crumb.label,
+              ...(crumb.href ? { item: `${siteConfig.url}${crumb.href}` } : {}),
+            })),
+          ],
+        })
+      : null
+
   return (
     <div className="scroll-mt-20 border-b border-border bg-card py-12 sm:py-16">
       <div className="mx-auto max-w-6xl px-4">
+        {jsonLd && (
+          <Script
+            id="breadcrumb-jsonld"
+            type="application/ld+json"
+            strategy="afterInteractive"
+          >
+            {jsonLd}
+          </Script>
+        )}
         {breadcrumbs && breadcrumbs.length > 0 && (
           <nav aria-label="Breadcrumb" className="mb-4">
             <ol className="flex items-center gap-1 text-sm text-muted-foreground">

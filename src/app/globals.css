@@ -137,6 +137,22 @@ body {
   color: var(--color-primary-foreground);
 }
 
+/* Scroll margin so anchored sections clear the sticky header */
+[id] {
+  scroll-margin-top: 5rem;
+}
+
+/* Screen-reader-only text for visually hidden but accessible content */
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
 /* Minimum touch-target: standalone interactive elements only.
    Badges, inline links, and nested elements are excluded. */
 a:not(p a, li a, span a, blockquote a, [data-slot]),
