@@ -46,6 +46,19 @@ export default function ContattiPage() {
                     </a>
                   </div>
                 </div>
+
+                <div className="flex items-start gap-3">
+                  <Mail className="mt-1 h-5 w-5 text-primary" aria-hidden="true" />
+                  <div>
+                    <p className="font-semibold">PEC</p>
+                    <a
+                      href={`mailto:${siteConfig.pec}`}
+                      className="text-muted-foreground transition-colors hover:text-foreground"
+                    >
+                      {siteConfig.pec}
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
 

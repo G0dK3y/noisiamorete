@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# local tooling
+.claude/
+
+# unclassified source assets (kept on disk, not in repo)
+/public/images/rete_webp/

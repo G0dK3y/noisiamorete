@@ -7,6 +7,7 @@ import { ProjectCard } from "@/components/sections/project-card"
 import { PresidentQuote } from "@/components/sections/president-quote"
 import { StatsCounter } from "@/components/sections/stats-counter"
 import { DonationCta } from "@/components/sections/donation-cta"
+import { GianduiaCampaign } from "@/components/sections/gianduia-campaign"
 import { featuredProjects } from "@/data/projects"
 import { siteConfig } from "@/config/site"
 
@@ -23,6 +24,11 @@ export default function HomePage() {
         secondaryCtaLabel="Chi siamo"
         secondaryCtaHref="/chi-siamo"
       />
+
+      {/* Active fundraising campaign */}
+      <SectionWrapper>
+        <GianduiaCampaign />
+      </SectionWrapper>
 
       {/* Featured projects — varied layout, not uniform grid */}
       <SectionWrapper title="I nostri progetti" subtitle="Le iniziative più recenti della Rete">

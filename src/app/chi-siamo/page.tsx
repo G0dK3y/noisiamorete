@@ -44,10 +44,9 @@ export default function ChiSiamoPage() {
               </figcaption>
             </figure>
             <p className="text-muted-foreground">
-              Nella vita di tutti i giorni oltre ad essere genitore,{" "}
-              {president.name} fa parte della Consulta Disabilità del Comune di
-              Ciampino, è una scrittrice e operatore tecnico dei servizi di
-              marketing nell'ambito turistico.
+              Nella vita di tutti i giorni, oltre ad essere genitore,{" "}
+              {president.name} è una scrittrice e operatore tecnico dei servizi
+              di marketing nell&apos;ambito turistico.
             </p>
           </div>
 
@@ -126,9 +125,9 @@ export default function ChiSiamoPage() {
             <article id="art-2" className="rounded-lg border border-border bg-card p-5">
               <h3 className="font-semibold">Art. 2 — Sede</h3>
               <p className="mt-2 text-sm text-muted-foreground">
-                Via dell&apos;Acqua Acetosa n. 70, Ciampino (Roma). Il Consiglio
-                Direttivo può trasferire la sede o istituire ulteriori sedi
-                operative senza modifica statutaria.
+                Via Liberiana 17, 00185 Roma. Il Consiglio Direttivo può
+                trasferire la sede o istituire ulteriori sedi operative senza
+                modifica statutaria.
               </p>
             </article>
 

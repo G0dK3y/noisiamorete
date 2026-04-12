@@ -17,7 +17,6 @@ export const president: TeamMember = {
   image: "/images/team/katiuscia-girolametti.jpg",
   details: [
     "Genitore caregiver",
-    "Membro della Consulta Disabilità del Comune di Ciampino",
     "Scrittrice",
     "Operatore tecnico dei servizi di marketing nell'ambito turistico",
   ],

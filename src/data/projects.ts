@@ -1,5 +1,22 @@
 import type { Project } from "@/types/project"
 
+const FESTIVAL_NUMBERS = [
+  17,
+  ...Array.from({ length: 86 }, (_, i) => 368 + i),
+  456,
+  457,
+  458,
+]
+
+const festivalGallery: string[] = [
+  "/images/projects/festival-sport-inclusivo/logo.webp",
+  "/images/projects/festival-sport-inclusivo/press-conference.webp",
+  "/images/projects/festival-sport-inclusivo/poster.webp",
+  ...FESTIVAL_NUMBERS.map(
+    (n) => `/images/projects/festival-sport-inclusivo/festival-${n}.webp`
+  ),
+]
+
 export const projects: Project[] = [
   {
     slug: "zoo-safari-tour",
@@ -8,8 +25,13 @@ export const projects: Project[] = [
       "Sculture animali da biciclette riciclate, un percorso artistico di inclusione ed economia circolare.",
     fullDescription:
       "Questa iniziativa, ideata dall'artista Paolo Lo Giudice, ha trasformato biciclette non più funzionanti in sculture \"animali\". Il progetto è stato un percorso artistico che ha unito il recupero di materiali altrimenti destinati alla discarica con la valorizzazione delle persone. I ragazzi della Rete Italiana Disabili hanno realizzato le sculture in ferro che sono state poi allestite nei parchi pubblici di Ciampino e Marino. Lavorando insieme, i partecipanti hanno sviluppato nuove energie psico-fisiche e abilità manuali, accrescendo il loro benessere e la loro autostima. L'intero percorso ha dimostrato che le diverse abilità sono una ricchezza per la crescita della comunità e ha promosso l'inclusione sociale e l'accettazione delle diversità.",
-    coverImage: "/images/projects/zoo-safari-tour/cover.jpg",
-    gallery: [],
+    coverImage: "/images/projects/zoo-safari-tour/scultura-uccello.webp",
+    gallery: [
+      "/images/projects/zoo-safari-tour/scultura-uccello.webp",
+      "/images/projects/zoo-safari-tour/telaio-bici.webp",
+      "/images/projects/zoo-safari-tour/gruppo-scolaresca.webp",
+      "/images/projects/zoo-safari-tour/logo.webp",
+    ],
     tags: ["arte", "economia circolare", "inclusione"],
     location: "Ciampino e Marino",
     year: 2025,
@@ -53,10 +75,11 @@ export const projects: Project[] = [
     shortDescription:
       "Evento sportivo per promuovere l'inclusione attraverso lo sport e il gioco.",
     fullDescription:
-      "Il Festival dello Sport Inclusivo è un evento dedicato alla promozione dell'inclusione sociale attraverso attività sportive accessibili a tutti. L'evento ha coinvolto atleti, famiglie e volontari in una giornata di sport, divertimento e condivisione.",
-    coverImage: "/images/projects/festival-sport-inclusivo/cover.jpg",
-    gallery: [],
+      "Il Festival dello Sport Inclusivo è un evento dedicato alla promozione dell'inclusione sociale attraverso attività sportive accessibili a tutti. L'edizione del 15 dicembre 2024, al Palazzetto dello Sport (Palatiziano) di Roma, ha coinvolto atleti, famiglie, volontari e cani di assistenza in una giornata di sport, laboratori, boxe, pet therapy e condivisione.",
+    coverImage: "/images/projects/festival-sport-inclusivo/logo.webp",
+    gallery: festivalGallery,
     tags: ["sport", "inclusione", "evento"],
+    location: "Roma, Palazzetto dello Sport (Palatiziano)",
     year: 2024,
     featured: false,
   },
@@ -67,8 +90,13 @@ export const projects: Project[] = [
       "I ragazzi della Rete hanno svolto un tirocinio presso la mensa aziendale di Compass Group Italia.",
     fullDescription:
       "Grazie a Microsoft Italia, i nostri ragazzi hanno svolto un tirocinio presso la mensa aziendale di Compass Group Italia. Siamo stati accolti a braccia aperte e abbiamo dimostrato che il nostro servizio non è solo eccellente, ma è fatto con amore, sorriso, empatia e genuinità. Questa esperienza è stata anche una preziosa occasione per presentarci a una grande multinazionale e a tante altre realtà, con la speranza che possano entrare a far parte della nostra rete.",
-    coverImage: "/images/projects/tirocinio-microsoft/cover.jpg",
-    gallery: [],
+    coverImage: "/images/projects/tirocinio-microsoft/servizio-mensa-1.webp",
+    gallery: [
+      "/images/projects/tirocinio-microsoft/servizio-mensa-1.webp",
+      "/images/projects/tirocinio-microsoft/servizio-mensa-2.webp",
+      "/images/projects/tirocinio-microsoft/pranzo-natale.webp",
+      "/images/projects/tirocinio-microsoft/abbraccio-cucina.webp",
+    ],
     tags: ["lavoro", "formazione", "inclusione"],
     location: "Milano",
     year: 2025,
@@ -136,13 +164,45 @@ export const projects: Project[] = [
       "Donazioni per rendere speciale l'Epifania per gli ospiti di una RSA dei Castelli Romani.",
     fullDescription:
       "Grazie alla generosa donazione del Coordinamento per le pari opportunità della STC di Roma UGL Trasporto Aereo e a tutte le altre donazioni dei nostri sostenitori, abbiamo reso speciale l'Epifania per gli ospiti di una RSA dei Castelli Romani.",
-    coverImage: "/images/projects/donazione-rsa/cover.jpg",
-    gallery: [],
+    coverImage: "/images/projects/donazione-rsa/consegna-panettoni.webp",
+    gallery: ["/images/projects/donazione-rsa/consegna-panettoni.webp"],
     tags: ["solidarietà", "donazioni", "RSA"],
     location: "Castelli Romani",
     year: 2025,
     featured: false,
     partners: ["UGL Trasporto Aereo"],
+  },
+  {
+    slug: "trekking-inclusivo",
+    title: "Trekking Inclusivo con Joëlette",
+    shortDescription:
+      "Escursione in natura con la carrozzina da trekking Joëlette per rendere i sentieri accessibili a tutti.",
+    fullDescription:
+      "Una giornata di cammino inclusivo in mezzo alla natura grazie alla Joëlette, la carrozzina monoruota da fuoristrada che permette alle persone con disabilità motoria di percorrere sentieri altrimenti inaccessibili. Volontari, famiglie e partecipanti hanno condiviso l'esperienza di un'escursione immersi nel verde, dimostrando che la montagna può essere un luogo di incontro per tutti.",
+    coverImage: "/images/projects/trekking-inclusivo/gruppo-trekking.webp",
+    gallery: [
+      "/images/projects/trekking-inclusivo/gruppo-trekking.webp",
+      "/images/projects/trekking-inclusivo/joelette.webp",
+    ],
+    tags: ["sport", "natura", "inclusione"],
+    year: 2025,
+    featured: false,
+  },
+  {
+    slug: "concorso-letterario-pittorico",
+    title: "Concorso Nazionale Letterario Pittorico — 1ª Edizione",
+    shortDescription:
+      "Prima edizione del concorso dedicato a un mondo senza barriere attraverso parole e immagini.",
+    fullDescription:
+      "La prima edizione del Concorso Nazionale Letterario Pittorico ha visto la partecipazione di numerosi artisti e scrittori che, attraverso le loro opere, hanno raccontato la loro visione di un mondo senza barriere. La cerimonia di premiazione ha celebrato i vincitori con targhe ufficiali, sottolineando il valore dell'arte come strumento di inclusione.",
+    coverImage: "/images/projects/concorso-letterario-pittorico/premiazione.webp",
+    gallery: [
+      "/images/projects/concorso-letterario-pittorico/premiazione.webp",
+      "/images/projects/concorso-letterario-pittorico/targhe.webp",
+    ],
+    tags: ["arte", "cultura", "concorso"],
+    year: 2025,
+    featured: false,
   },
 ]
 
