@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button"
 import { PageHeader } from "@/components/common/page-header"
 import { SectionWrapper } from "@/components/common/section-wrapper"
 import { PdfDownloadButton } from "@/components/common/pdf-download-button"
+import { ProjectGallery } from "@/components/sections/project-gallery"
 import { ShareButtons } from "@/components/common/share-buttons"
 import { generatePageMetadata } from "@/lib/metadata"
 import { projects, getProjectBySlug } from "@/data/projects"
@@ -94,6 +95,10 @@ export default async function ProjectPage({
                 ))}
               </div>
             </div>
+          )}
+
+          {project.gallery.length > 0 && (
+            <ProjectGallery images={project.gallery} projectTitle={project.title} />
           )}
 
           <ShareButtons path={`/progetti/${project.slug}`} title={project.title} />
