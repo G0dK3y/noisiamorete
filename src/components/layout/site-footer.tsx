@@ -11,6 +11,7 @@ const footerLinks = {
     { label: "La nostra missione", href: "/missione" },
     { label: "Dicono di noi", href: "/dicono-di-noi" },
     { label: "Trasparenza", href: "/trasparenza" },
+    { label: "Presentazione (PDF)", href: "/documents/presentazione-rete-italiana-disabili.pdf" },
   ],
   Progetti: [
     { label: "Tutti i progetti", href: "/progetti" },
@@ -49,16 +50,30 @@ export function SiteFooter() {
             <nav key={group} aria-label={`Navigazione ${group}`}>
               <h3 className="mb-3 text-sm font-semibold">{group}</h3>
               <ul className="space-y-2">
-                {links.map((link) => (
-                  <li key={link.href}>
-                    <Link
-                      href={link.href}
-                      className="text-sm text-muted-foreground transition-colors hover:text-foreground"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
+                {links.map((link) => {
+                  const isPdf = link.href.endsWith(".pdf")
+                  return (
+                    <li key={link.href}>
+                      {isPdf ? (
+                        <a
+                          href={link.href}
+                          target="_blank"
+                          rel="noopener"
+                          className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                        >
+                          {link.label}
+                        </a>
+                      ) : (
+                        <Link
+                          href={link.href}
+                          className="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                        >
+                          {link.label}
+                        </Link>
+                      )}
+                    </li>
+                  )
+                })}
               </ul>
             </nav>
           ))}

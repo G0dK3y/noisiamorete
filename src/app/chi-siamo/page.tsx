@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
-import { Scale } from "lucide-react"
+import { Download, Scale } from "lucide-react"
+import { Button } from "@/components/ui/button"
 import { PageHeader } from "@/components/common/page-header"
 import { SectionWrapper } from "@/components/common/section-wrapper"
 import { generatePageMetadata } from "@/lib/metadata"
@@ -48,6 +49,24 @@ export default function ChiSiamoPage() {
               {president.name} è una scrittrice e operatore tecnico dei servizi
               di marketing nell&apos;ambito turistico.
             </p>
+
+            <div className="rounded-lg border border-border bg-card p-5">
+              <h3 className="text-base font-semibold">Brochure di presentazione</h3>
+              <p className="mt-1 text-sm text-muted-foreground">
+                Scarica il documento ufficiale con la presentazione completa
+                dell&apos;associazione, le attività e i progetti.
+              </p>
+              <Button asChild className="mt-4" size="sm">
+                <a
+                  href="/documents/presentazione-rete-italiana-disabili.pdf"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <Download className="mr-2 h-4 w-4" aria-hidden="true" />
+                  Scarica la presentazione (PDF)
+                </a>
+              </Button>
+            </div>
           </div>
 
           <div className="space-y-4">
