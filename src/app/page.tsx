@@ -8,6 +8,7 @@ import { PresidentQuote } from "@/components/sections/president-quote"
 import { StatsCounter } from "@/components/sections/stats-counter"
 import { DonationCta } from "@/components/sections/donation-cta"
 import { GianduiaCampaign } from "@/components/sections/gianduia-campaign"
+import { UpcomingEvents } from "@/components/sections/upcoming-events"
 import { featuredProjects } from "@/data/projects"
 import { siteConfig } from "@/config/site"
 
@@ -24,6 +25,11 @@ export default function HomePage() {
         secondaryCtaLabel="Chi siamo"
         secondaryCtaHref="/chi-siamo"
       />
+
+      {/* Upcoming events */}
+      <SectionWrapper>
+        <UpcomingEvents />
+      </SectionWrapper>
 
       {/* Active fundraising campaign */}
       <SectionWrapper>

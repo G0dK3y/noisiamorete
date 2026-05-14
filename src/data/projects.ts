@@ -158,6 +158,21 @@ export const projects: Project[] = [
     featured: false,
   },
   {
+    slug: "festa-mamma-mensa-caritas",
+    title: "Festa della Mamma alla Mensa Caritas",
+    shortDescription:
+      "Crema spalmabile e cioccolata calda per gli ospiti della Mensa Caritas di Colle Oppio in occasione della Festa della Mamma.",
+    fullDescription:
+      "Nel progetto \"Nessuno è troppo povero per donare un sorriso\", che prosegue ininterrottamente da gennaio 2026, abbiamo dedicato l'iniziativa della Festa della Mamma agli ospiti della Mensa Caritas di Colle Oppio. Un simbolico \"prezioso vaso\" da 5 kg di crema spalmabile, interamente donato da La Casa del Dolce di Ciampino, ha permesso di destinare i fondi raccolti ad altre necessità caritatevoli. I volontari della Parrocchia di San Luigi Gonzaga di Ciampino, partner costante del progetto, hanno preparato pane e cioccolata calda per i partecipanti, trasformando una donazione in un momento di condivisione e calore umano.",
+    coverImage: "/images/projects/festa-mamma-mensa-caritas/locandina.webp",
+    gallery: ["/images/projects/festa-mamma-mensa-caritas/locandina.webp"],
+    tags: ["solidarietà", "donazioni", "caritas"],
+    location: "Mensa Caritas Colle Oppio, Roma",
+    year: 2026,
+    featured: false,
+    partners: ["La Casa del Dolce di Ciampino", "Parrocchia San Luigi Gonzaga di Ciampino", "Caritas"],
+  },
+  {
     slug: "donazione-rsa-epifania",
     title: "Epifania in RSA",
     shortDescription:

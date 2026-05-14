@@ -33,11 +33,11 @@ export function SiteFooter() {
           <div className="space-y-4">
             <Link href="/" aria-label="Torna alla homepage">
               <Image
-                src="/logo-wide.png"
-                alt={siteConfig.name}
-                width={200}
-                height={60}
-                className="h-auto w-48"
+                src="/logo-aps-wide.webp"
+                alt={`${siteConfig.name} APS — Noi siamo Rete`}
+                width={1112}
+                height={218}
+                className="h-auto w-56"
               />
             </Link>
             <p className="text-sm text-muted-foreground">{siteConfig.tagline}</p>
