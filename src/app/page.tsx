@@ -7,7 +7,6 @@ import { ProjectCard } from "@/components/sections/project-card"
 import { PresidentQuote } from "@/components/sections/president-quote"
 import { StatsCounter } from "@/components/sections/stats-counter"
 import { DonationCta } from "@/components/sections/donation-cta"
-import { GianduiaCampaign } from "@/components/sections/gianduia-campaign"
 import { UpcomingEvents } from "@/components/sections/upcoming-events"
 import { featuredProjects } from "@/data/projects"
 import { siteConfig } from "@/config/site"
@@ -29,11 +28,6 @@ export default function HomePage() {
       {/* Upcoming events */}
       <SectionWrapper>
         <UpcomingEvents />
-      </SectionWrapper>
-
-      {/* Active fundraising campaign */}
-      <SectionWrapper>
-        <GianduiaCampaign />
       </SectionWrapper>
 
       {/* Featured projects — varied layout, not uniform grid */}

@@ -13,6 +13,7 @@ export const metadata: Metadata = generatePageMetadata({
 })
 
 const bilanci = [
+  { anno: "2025", href: "/documents/bilancio-2025.pdf" },
   { anno: "2024", href: "/documents/bilancio-2024.pdf" },
   { anno: "2023", href: "/documents/bilancio-2023.pdf" },
   { anno: "2022", href: "/documents/bilancio-2022.pdf" },
@@ -40,7 +41,7 @@ export default function TrasparenzaPage() {
             </p>
           </div>
 
-          <div className="grid gap-4 sm:grid-cols-3">
+          <div className="grid gap-4 grid-cols-2 sm:grid-cols-4">
             {bilanci.map((b) => (
               <div
                 key={b.anno}

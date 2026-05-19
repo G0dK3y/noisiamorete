@@ -34,29 +34,6 @@ type EventItem = {
 
 const EVENTS: EventItem[] = [
   {
-    slug: "partita-solidale-ciampino",
-    title: "Partita Solidale",
-    tagline: "Il calcio come ponte verso l'inclusione",
-    date: new Date("2026-05-15T18:30:00+02:00"),
-    dateLabel: "Mercoledì 15 maggio 2026",
-    timeLabel: "Ore 18:30",
-    locationLabel: "Centro Sportivo, Via Icaro 1, Ciampino (RM)",
-    description:
-      "A.S.D. Colberoma Academy e Rete Italiana Disabili insieme per una serata di sport e fratellanza, con il patrocinio della Parrocchia Gesù Divino Operaio. Dopo il fischio finale, tutti a tavola per il tradizionale Terzo Tempo.",
-    poster: {
-      src: "/images/home/eventi/15_maggio_partita_solidale.webp",
-      alt: "Locandina Partita Solidale del 15 maggio 2026 a Ciampino",
-    },
-    ctas: [
-      {
-        label: "Scrivi su WhatsApp",
-        href: "https://wa.me/393926271434",
-        variant: "outline",
-        external: true,
-      },
-    ],
-  },
-  {
     slug: "festa-primavera-castel-gandolfo",
     title: "La Grande Festa di Primavera",
     tagline: "More Love, Less Barriers — Noi Siamo Rete",
