@@ -34,39 +34,6 @@ type EventItem = {
 
 const EVENTS: EventItem[] = [
   {
-    slug: "festa-primavera-castel-gandolfo",
-    title: "La Grande Festa di Primavera",
-    tagline: "More Love, Less Barriers — Noi Siamo Rete",
-    date: new Date("2026-05-24T10:30:00+02:00"),
-    dateLabel: "Domenica 24 maggio 2026",
-    timeLabel: "Accoglienza dalle 10:30",
-    locationLabel: "Tenuta Mosaico, Castel Gandolfo (RM)",
-    description:
-      "Una giornata di gioia, natura e inclusione: laboratorio di riciclo con RiArtEco, digitalizzazione inclusiva con LoveMeToo, percorsi nel verde e incontro con i cavalli con Green Light APS, laboratorio pizza e musica dal vivo con JSAX Events. Ingresso gratuito con prenotazione obbligatoria.",
-    poster: {
-      src: "/images/home/eventi/festa_della_primavera.webp",
-      alt: "Locandina della Grande Festa di Primavera del 24 maggio 2026 a Castel Gandolfo",
-    },
-    extraPoster: {
-      src: "/images/home/eventi/festa_della_primavera_programma_dettagliato.webp",
-      alt: "Programma dettagliato della Grande Festa di Primavera del 24 maggio 2026",
-      label: "Programma dettagliato",
-    },
-    ctas: [
-      {
-        label: "Prenota su Eventbrite",
-        href: "https://www.eventbrite.com/e/biglietti-la-grande-festa-di-primavera-1986904177882",
-        external: true,
-      },
-      {
-        label: "Info via WhatsApp",
-        href: "https://wa.me/393332967651",
-        variant: "outline",
-        external: true,
-      },
-    ],
-  },
-  {
     slug: "a-tutto-campo-vigna-fiorita",
     title: "A Tutto Campo",
     tagline: "Padel e Tennis senza barriere",
@@ -97,15 +64,10 @@ const EVENTS: EventItem[] = [
     slug: "prenditi-cura-di-te-catania",
     title: "Prenditi cura di te",
     tagline: "Percorso di benessere psicologico per caregiver",
-    date: new Date("2026-05-29T20:30:00+02:00"),
-    dateLabel: "Da marzo a maggio 2026",
-    timeLabel: "Vedi calendario",
+    date: new Date("2026-05-29T18:30:00+02:00"),
+    dateLabel: "Venerdì 29 maggio 2026",
+    timeLabel: "Ore 18:30–20:30",
     sessions: [
-      {
-        dateLabel: "Venerdì 22 maggio",
-        timeLabel: "Ore 18:00–20:30",
-        note: "Spazio Terzo A.P.S. — (RI)conoscersi: uno spazio d'incontro e condivisione",
-      },
       {
         dateLabel: "Venerdì 29 maggio",
         timeLabel: "Ore 18:30–20:30",
