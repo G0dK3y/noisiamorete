@@ -11,7 +11,7 @@ export const mainNav: NavItem[] = [
   { label: "I Progetti", href: "/progetti" },
   { label: "Dicono di noi", href: "/dicono-di-noi" },
   { label: "Contatti", href: "/contatti" },
-  { label: "Sponsor", href: "/sponsor" },
+  { label: "Sponsor e partner", href: "/sponsor" },
 ]
 
 export const ctaNav: NavItem[] = [

@@ -16,7 +16,7 @@ const footerLinks = {
   Progetti: [
     { label: "Tutti i progetti", href: "/progetti" },
     { label: "Zoo Safari Tour", href: "/progetti/zoo-safari-tour" },
-    { label: "Sponsor", href: "/sponsor" },
+    { label: "Sponsor e partner", href: "/sponsor" },
   ],
   Supportaci: [
     { label: "Dona ora", href: "/dona" },

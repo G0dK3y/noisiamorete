@@ -7,9 +7,9 @@ import { SponsorGrid } from "@/components/sections/sponsor-grid"
 import { generatePageMetadata } from "@/lib/metadata"
 
 export const metadata: Metadata = generatePageMetadata({
-  title: "I nostri sponsor",
+  title: "I nostri sponsor e partner",
   description:
-    "I nostri progetti di inclusione sono realizzati grazie al continuo supporto dei nostri sponsor.",
+    "I nostri progetti di inclusione sono realizzati grazie al continuo supporto di sponsor, partner e patrocini.",
   path: "/sponsor",
 })
 
@@ -17,9 +17,9 @@ export default function SponsorPage() {
   return (
     <>
       <PageHeader
-        title="I nostri sponsor"
-        description="I nostri progetti di inclusione sono realizzati grazie al continuo supporto dei nostri sponsor"
-        breadcrumbs={[{ label: "Sponsor" }]}
+        title="I nostri sponsor e partner"
+        description="I nostri progetti di inclusione sono realizzati grazie al continuo supporto di sponsor, partner e patrocini"
+        breadcrumbs={[{ label: "Sponsor e partner" }]}
       />
 
       <SectionWrapper>

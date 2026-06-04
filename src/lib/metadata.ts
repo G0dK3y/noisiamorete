@@ -16,7 +16,8 @@ export function generatePageMetadata({
   const ogImage = image ?? siteConfig.ogImage
 
   return {
-    title: `${title} | ${siteConfig.name}`,
+    // Il nome del sito viene aggiunto dal title.template nel layout root
+    title,
     description,
     alternates: { canonical: url },
     openGraph: {
