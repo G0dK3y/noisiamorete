@@ -1,4 +1,5 @@
 import type { Project } from "@/types/project"
+import { pastEventsAsProjects } from "@/data/events"
 
 const FESTIVAL_NUMBERS = [
   17,
@@ -17,7 +18,7 @@ const festivalGallery: string[] = [
   ),
 ]
 
-export const projects: Project[] = [
+const staticProjects: Project[] = [
   {
     slug: "zoo-safari-tour",
     title: "Zoo Safari Tour",
@@ -219,7 +220,30 @@ export const projects: Project[] = [
     year: 2025,
     featured: false,
   },
+  {
+    slug: "campagna-gianduia",
+    title: "Campagna Gianduia — Una dolcezza che sostiene il coraggio",
+    shortDescription:
+      "Dona 15€ e ricevi un vasetto di crema artigianale alla Gianduia della Casa del Dolce di Ciampino.",
+    fullDescription:
+      "Dal 15 aprile al 15 maggio 2026, una donazione di 15 € a Rete Italiana Disabili è stata ricambiata con un vasetto di crema artigianale alla Gianduia, offerto dalla Casa del Dolce di Ciampino. Ogni contributo si è trasformato in sostegno concreto: assistenza, sollievo e progetti di Cura Ricreativa per restituire ai ragazzi il diritto al gioco e ai genitori la forza di continuare.",
+    coverImage: "/images/home/gianduia/banner.webp",
+    gallery: [
+      "/images/home/gianduia/banner.webp",
+      "/images/home/gianduia/card-1.webp",
+      "/images/home/gianduia/card-2.webp",
+      "/images/home/gianduia/card-3.webp",
+    ],
+    tags: ["solidarietà", "donazioni", "campagna"],
+    location: "Ciampino",
+    year: 2026,
+    featured: false,
+    partners: ["La Casa del Dolce di Ciampino"],
+  },
 ]
+
+/** Progetti statici + eventi conclusi (accodati in fondo, dal più recente). */
+export const projects: Project[] = [...staticProjects, ...pastEventsAsProjects]
 
 export const featuredProjects = projects.filter((p) => p.featured).slice(0, 3)
 

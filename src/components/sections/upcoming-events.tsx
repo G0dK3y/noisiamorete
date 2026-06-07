@@ -3,103 +3,10 @@ import Link from "next/link"
 import { Calendar, Clock, MapPin, ArrowRight, Ticket } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-
-type EventCta = {
-  label: string
-  href: string
-  variant?: "default" | "outline"
-  external?: boolean
-}
-
-type EventSession = {
-  dateLabel: string
-  timeLabel: string
-  note?: string
-}
-
-type EventItem = {
-  slug: string
-  title: string
-  tagline: string
-  date: Date
-  dateLabel: string
-  timeLabel: string
-  sessions?: EventSession[]
-  locationLabel: string
-  description: string
-  poster: { src: string; alt: string }
-  extraPoster?: { src: string; alt: string; label: string }
-  ctas: EventCta[]
-}
-
-const EVENTS: EventItem[] = [
-  {
-    slug: "a-tutto-campo-vigna-fiorita",
-    title: "A Tutto Campo",
-    tagline: "Padel e Tennis senza barriere",
-    date: new Date("2026-06-13T10:00:00+02:00"),
-    dateLabel: "Tre giornate — maggio e giugno 2026",
-    timeLabel: "Vedi calendario",
-    sessions: [
-      { dateLabel: "Domenica 31 maggio", timeLabel: "Ore 9:00", note: "Apertura e avviamento allo sport" },
-      { dateLabel: "Mercoledì 10 giugno", timeLabel: "Ore 10:00", note: "Allenamento e gioco guidato" },
-      { dateLabel: "Sabato 13 giugno", timeLabel: "Ore 10:00", note: "Giornata conclusiva e tornei inclusivi" },
-    ],
-    locationLabel: "Tennis Club Vigna Fiorita, Via Quarto Sant'Antonio SNC, Ciampino (RM)",
-    description:
-      "Tre giornate gratuite di Padel e Tennis con il Tennis Club Vigna Fiorita e il patrocinio del CIP Lazio. Supporto tecnico di Monia Franchi; i volontari di Rete Italiana Disabili garantiscono accompagnamento e assistenza mirata a partecipanti con disabilità anche complesse.",
-    poster: {
-      src: "/images/home/eventi/a_tutto_campo.webp",
-      alt: "Locandina A Tutto Campo: tre giornate di padel e tennis al Tennis Club Vigna Fiorita di Ciampino",
-    },
-    ctas: [
-      {
-        label: "Prenota via WhatsApp",
-        href: "https://wa.me/393926271434",
-        external: true,
-      },
-    ],
-  },
-  {
-    slug: "prenditi-cura-di-te-catania",
-    title: "Prenditi cura di te",
-    tagline: "Percorso di benessere psicologico per caregiver",
-    date: new Date("2026-05-29T18:30:00+02:00"),
-    dateLabel: "Venerdì 29 maggio 2026",
-    timeLabel: "Ore 18:30–20:30",
-    sessions: [
-      {
-        dateLabel: "Venerdì 29 maggio",
-        timeLabel: "Ore 18:30–20:30",
-        note: "Theatrike — laboratorio d'improvvisazione teatrale",
-      },
-    ],
-    locationLabel: "Piazza Scammacca 9, 95131 Catania (CT)",
-    description:
-      "Sei incontri promossi da Rete Italiana Disabili Sicilia con il Comune di Catania: cura di sé, identità genitoriale, meditazione, condivisione e improvvisazione teatrale. Alle 19:30 \u201Cpillole di vino\u201D con ONAV Catania e brindisi offerto da Piazza Scammacca.",
-    poster: {
-      src: "/images/home/eventi/prenditi_cura_di_te.webp",
-      alt: "Locandina Prenditi cura di te: percorso di benessere psicologico per caregiver a Catania",
-    },
-    ctas: [
-      {
-        label: "Info via WhatsApp",
-        href: "https://wa.me/393286230602",
-        external: true,
-      },
-    ],
-  },
-]
-
-function isUpcoming(event: EventItem) {
-  // Keep event visible until end of its day (local Europe/Rome time)
-  const endOfDay = new Date(event.date)
-  endOfDay.setHours(23, 59, 59, 999)
-  return endOfDay.getTime() >= Date.now()
-}
+import { upcomingEvents } from "@/data/events"
 
 export function UpcomingEvents() {
-  const upcoming = EVENTS.filter(isUpcoming)
+  const upcoming = upcomingEvents
 
   if (upcoming.length === 0) return null
 
