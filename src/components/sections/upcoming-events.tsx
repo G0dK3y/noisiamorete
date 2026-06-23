@@ -29,7 +29,11 @@ export function UpcomingEvents() {
       </div>
 
       <ul className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-        {upcoming.map((event) => (
+        {upcoming.map((event) => {
+          const galleryCards =
+            event.gallery?.filter((src) => src !== event.poster.src) ?? []
+
+          return (
           <li key={event.slug}>
             <article className="flex h-full flex-col overflow-hidden rounded-xl border border-border bg-card shadow-sm">
               <div className="relative aspect-[4/5] w-full bg-muted sm:aspect-[3/4]">
@@ -133,6 +137,36 @@ export function UpcomingEvents() {
                   </Link>
                 )}
 
+                {galleryCards.length > 0 && (
+                  <div>
+                    <p className="mb-2 text-sm font-semibold">
+                      Sfoglia le card dell&apos;iniziativa
+                    </p>
+                    <ul className="grid grid-cols-4 gap-2">
+                      {galleryCards.map((src, i) => (
+                        <li key={src}>
+                          <Link
+                            href={src}
+                            target="_blank"
+                            rel="noopener"
+                            className="group block overflow-hidden rounded-lg border border-border"
+                          >
+                            <div className="relative aspect-[4/5] w-full bg-muted">
+                              <Image
+                                src={src}
+                                alt={`${event.title} — card ${i + 2}`}
+                                fill
+                                className="object-cover transition-transform group-hover:scale-105"
+                                sizes="120px"
+                              />
+                            </div>
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
                 <div className="mt-auto flex flex-wrap items-center gap-3 pt-2">
                   {event.ctas.map((cta) => {
                     const isPrimary = cta.variant !== "outline"
@@ -160,7 +194,8 @@ export function UpcomingEvents() {
               </div>
             </article>
           </li>
-        ))}
+          )
+        })}
       </ul>
     </div>
   )
