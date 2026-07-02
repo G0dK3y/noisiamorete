@@ -1,7 +1,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { siteConfig } from "@/config/site"
-import { SocialLinks } from "@/components/common/social-links"
+import { SocialCallout } from "@/components/common/social-callout"
 import { IbanDisplay } from "@/components/common/iban-display"
 import { Separator } from "@/components/ui/separator"
 
@@ -42,7 +42,7 @@ export function SiteFooter() {
               />
             </Link>
             <p className="text-sm text-muted-foreground">{siteConfig.tagline}</p>
-            <SocialLinks />
+            <SocialCallout />
           </div>
 
           {/* Link groups */}

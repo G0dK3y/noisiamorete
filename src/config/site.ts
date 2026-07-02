@@ -14,8 +14,9 @@ export const siteConfig = {
   gofundme: "https://www.gofundme.com/f/sostieni-i-volontari-di-rete-italiana-disabili",
   founded: 2020,
   social: {
-    facebook: "https://www.facebook.com/p/Rete-Italiana-Disabili-61579720119544/",
+    facebook: "https://www.facebook.com/people/Rete-Italiana-Disabili-ets/61579720119544/",
     instagram: "https://www.instagram.com/reteitalianadisabili/",
+    instagramSicilia: "https://www.instagram.com/reteitalianadisabili_sicilia/",
     youtube: "https://youtube.com/@katiusciagirolametti6817",
   },
 } as const

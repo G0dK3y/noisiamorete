@@ -3,6 +3,7 @@ import Link from "next/link"
 import { Calendar, Clock, MapPin, ArrowRight, Ticket } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
+import { SocialCallout } from "@/components/common/social-callout"
 import { upcomingEvents } from "@/data/events"
 
 export function UpcomingEvents() {
@@ -167,29 +168,35 @@ export function UpcomingEvents() {
                   </div>
                 )}
 
-                <div className="mt-auto flex flex-wrap items-center gap-3 pt-2">
-                  {event.ctas.map((cta) => {
-                    const isPrimary = cta.variant !== "outline"
-                    return (
-                      <Button
-                        key={cta.href}
-                        asChild
-                        size="lg"
-                        variant={cta.variant ?? "default"}
-                      >
-                        <Link
-                          href={cta.href}
-                          target={cta.external ? "_blank" : undefined}
-                          rel={cta.external ? "noopener" : undefined}
+                <div className="mt-auto space-y-4 pt-2">
+                  <div className="flex flex-wrap items-center gap-3">
+                    {event.ctas.map((cta) => {
+                      const isPrimary = cta.variant !== "outline"
+                      return (
+                        <Button
+                          key={cta.href}
+                          asChild
+                          size="lg"
+                          variant={cta.variant ?? "default"}
                         >
-                          {isPrimary && (
-                            <Ticket className="mr-2 h-4 w-4" aria-hidden="true" />
-                          )}
-                          {cta.label}
-                        </Link>
-                      </Button>
-                    )
-                  })}
+                          <Link
+                            href={cta.href}
+                            target={cta.external ? "_blank" : undefined}
+                            rel={cta.external ? "noopener" : undefined}
+                          >
+                            {isPrimary && (
+                              <Ticket className="mr-2 h-4 w-4" aria-hidden="true" />
+                            )}
+                            {cta.label}
+                          </Link>
+                        </Button>
+                      )
+                    })}
+                  </div>
+                  <SocialCallout
+                    className="border-t border-border pt-4"
+                    headingClassName="text-xs uppercase tracking-wide text-muted-foreground"
+                  />
                 </div>
               </div>
             </article>
