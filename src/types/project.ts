@@ -5,6 +5,8 @@ export interface Project {
   fullDescription: string
   coverImage: string
   gallery: string[]
+  /** Video mostrati in coda alla galleria. */
+  videos?: string[]
   tags: string[]
   location?: string
   year: number

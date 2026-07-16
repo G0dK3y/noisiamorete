@@ -26,6 +26,8 @@ export type EventItem = {
   /** Tag usati quando l'evento concluso diventa un progetto */
   tags?: string[]
   poster: { src: string; alt: string }
+  /** Clip promozionale (verticale) mostrata nella card dell'evento. */
+  video?: { src: string; label: string }
   extraPoster?: { src: string; alt: string; label: string }
   /** Galleria completa (es. card promozionali): diventa la gallery del progetto una volta archiviato. */
   gallery?: string[]
@@ -37,6 +39,39 @@ const ATC_PADEL_CARDS = [1, 2, 3, 4, 5].map(
 )
 
 const EVENTS: EventItem[] = [
+  {
+    slug: "a-tutto-campo-speciale-serale",
+    title: "A Tutto Campo – Speciale Serale",
+    tagline: "Padel inclusivo e giro pizza a bordo campo",
+    date: new Date("2026-07-28T18:00:00+02:00"),
+    dateLabel: "Martedì 28 luglio 2026",
+    timeLabel: "Ore 18:00–19:30",
+    locationLabel: "Tennis Club Vigna Fiorita, Via Quarto Sant'Antonio SNC, Ciampino (RM)",
+    description:
+      "Una speciale serata A Tutto Campo insieme al Tennis Club Vigna Fiorita: padel inclusivo e giro pizza a bordo campo, con pizza, fritti, bibita e dolce. Quota intera 20 € tutto compreso, bambini dai 3 ai 6 anni 10 €, gratis i piccolissimi sotto i 3 anni. Partecipando darai anche un piccolo e prezioso contributo a sostegno delle attività inclusive dell'Associazione.",
+    tags: ["sport", "padel", "inclusione"],
+    poster: {
+      src: "/images/home/eventi/a-tutto-campo-speciale-serale.webp",
+      alt: "Locandina Speciale Serale A Tutto Campo: padel inclusivo e giro pizza a bordo campo al Tennis Club Vigna Fiorita di Ciampino, martedì 28 luglio 2026 dalle 18:00",
+    },
+    video: {
+      src: "/videos/a-tutto-campo-speciale-serale.mp4",
+      label: "Guarda il video della serata",
+    },
+    ctas: [
+      {
+        label: "Prenota via WhatsApp",
+        href: "https://wa.me/393332967651",
+        external: true,
+      },
+      {
+        label: "Oppure 392 627 1434",
+        href: "https://wa.me/393926271434",
+        variant: "outline",
+        external: true,
+      },
+    ],
+  },
   {
     slug: "a-tutto-campo-padel-inclusivo",
     title: "A Tutto Campo – Padel Inclusivo",
@@ -342,6 +377,7 @@ export function eventToProject(event: EventItem): Project {
     fullDescription: `${event.description}\nEvento svolto il ${event.dateLabel} presso ${event.locationLabel}.`,
     coverImage: event.poster.src,
     gallery,
+    videos: event.video ? [event.video.src] : undefined,
     tags: event.tags ?? [],
     location: event.locationLabel,
     year: event.date.getFullYear(),

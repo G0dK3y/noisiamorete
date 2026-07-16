@@ -97,8 +97,12 @@ export default async function ProjectPage({
             </div>
           )}
 
-          {project.gallery.length > 0 && (
-            <ProjectGallery images={project.gallery} projectTitle={project.title} />
+          {(project.gallery.length > 0 || (project.videos?.length ?? 0) > 0) && (
+            <ProjectGallery
+              images={project.gallery}
+              videos={project.videos}
+              projectTitle={project.title}
+            />
           )}
 
           <ShareButtons path={`/progetti/${project.slug}`} title={project.title} />
