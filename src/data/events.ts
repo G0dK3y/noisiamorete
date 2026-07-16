@@ -56,7 +56,7 @@ const EVENTS: EventItem[] = [
     },
     video: {
       src: "/videos/a-tutto-campo-speciale-serale.mp4",
-      label: "Guarda il video della serata",
+      label: "La testimonianza che ti invita a partecipare",
     },
     ctas: [
       {
